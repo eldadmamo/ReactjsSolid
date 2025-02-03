@@ -1,0 +1,296 @@
+
+
+
+
+web3: is a collection of libraries that allow to interact with local or remote eterium node wusing http, IPC or Websockets
+
+
+C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity>truffle migrate --reset
+
+Compiling your contracts...
+===========================
+√ Fetching solc version list from solc-bin. Attempt #1
+√ Downloading compiler. Attempt #1.
+> Compiling .\contracts\FaucetContract.sol
+> Compiling .\contracts\FaucetContract.sol
+> Compiling .\contracts\Migrations.sol
+> Artifacts written to C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity\build\contracts
+> Compiled successfully using:
+   - solc: 0.8.4+commit.c7e474f2.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x3b26cbe5c4f6f581ab450d1c5f71eb345066416fa0d41629eec70a2bdfc75667
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x5Ce012dAa608547D2A4D8cf5E09774dF7FCceE48
+   > block number:        5
+   > block timestamp:     1738616116
+   > account:             0xd591aACE1Edcd252966C40354606d48B032f0831
+   > balance:             99.997730038402035698
+   > gas used:            248204 (0x3c98c)
+   > gas price:           3.023105092 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000750346776254768 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000750346776254768 ETH
+
+
+2_faucet_migration.js
+=====================
+
+   Replacing 'Faucet'
+   ------------------
+   > transaction hash:    0xec9717e00b639e248e7a0a7ba737ba4c09c124c92452ab7ec77259d585213085
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xAF259891F25f6143195B81F016801C5bb9590B83
+   > block number:        7
+   > block timestamp:     1738616116
+   > account:             0xd591aACE1Edcd252966C40354606d48B032f0831
+   > balance:             99.997395418208119571
+   > gas used:            68353 (0x10b01)
+   > gas price:           2.905517384 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000198600829748552 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000198600829748552 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.00094894760600332 ETH
+
+
+
+
+C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity>truffle console
+truffle(development)> accounts
+[
+  '0xd591aACE1Edcd252966C40354606d48B032f0831',
+  '0x7EE1E2f73e13708CDEEABF56B2243F82E20c94Bf',
+  '0x11665EB05F30675e0f2350404E01152F7d932754',
+  '0x68e982AD3Ea1CeDD6aF65f79469Bc350F9F6A366',
+  '0x5939154ac00379c54F4a9BA50aeF03e34A06De08',
+  '0x6F13171B4E6e23A376245Dc5313eE4b39C0803e3',
+  '0x1EB3eA028740e43d49e12dA154Db021d1A13ccEb',
+  '0xba2AED5617c52d4440F5FBE75397a4C20555175c',
+  '0x88E16B9F0A7f760A05807359E2e46DbB06fCA52A',
+  '0x9d4991DFc6e9a60e88998f2A9c3C18590717a007'
+]
+truffle(development)> web3.eth.sendTransaction({from: accounts[0], to: "0xAF259891F25f6143195B81F016801C5bb9590B83", value: "10000000000000000000"})
+{
+  transactionHash: '0x22921c15a02f526c49f5eb9caaeca9fe14493e1b7f7bf2e97469331b3b975da1',
+  transactionIndex: 0,
+  blockNumber: 9,
+  blockHash: '0x4d7c455bc2be107f5594f90d9b973d64fcefceac6faadddafd73dc9ccb221ed0',
+  from: '0xd591aace1edcd252966c40354606d48b032f0831',
+  to: '0xaf259891f25f6143195b81f016801c5bb9590b83',
+  cumulativeGasUsed: 21033,
+  gasUsed: 21033,
+  contractAddress: null,
+  logs: [],
+  logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  status: true,
+  effectiveGasPrice: 2811757610,
+  type: '0x2'
+}
+
+
+truffle(development)> web3.eth.getCode("0xAF259891F25f6143195B81F016801C5bb9590B83")
+'0x608060405236600a57005b600080fdfea26469706673582212202c961bc40ca76e28bbd7104a01223675cd739a837cc1cdd91d46282a7bfd7d2964736f6c63430008040033'
+truffle(development)>
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+truffle(development)>
+
+C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity>truffle migrate --reset
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\FaucetContract.sol
+> Compiling .\contracts\FaucetContract.sol
+> Compiling .\contracts\Migrations.sol
+> Artifacts written to C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity\build\contracts
+> Compiled successfully using:
+   - solc: 0.8.4+commit.c7e474f2.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x31b8ce2e8056f167ac1abcb4b3a4096f74c87db0a98a655f097a8146ab8d7c5f
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x3b8Bf63e7FbE573A826D98c5c9F1E5cC0FD4dBF7
+   > block number:        10
+   > block timestamp:     1738624629
+   > account:             0xd591aACE1Edcd252966C40354606d48B032f0831
+   > balance:             89.996565715076381756
+   > gas used:            248204 (0x3c98c)
+   > gas price:           2.773031781 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000688277580171324 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000688277580171324 ETH
+
+
+2_faucet_migration.js
+=====================
+
+   Replacing 'Faucet'
+   ------------------
+   > transaction hash:    0x27c81baa4bbf25472095a14e80b383a23294a56205b85315a33b4485ee7b749e
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x9eDc921773B74852421Cb4543F2a28a8df97c292
+   > block number:        12
+   > block timestamp:     1738624629
+   > account:             0xd591aACE1Edcd252966C40354606d48B032f0831
+   > balance:             89.99622586850606929
+   > gas used:            78911 (0x1343f)
+   > gas price:           2.711657534 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000213979607665474 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000213979607665474 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.000902257187836798 ETH
+
+
+
+C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity>truffle console
+truffle(development)> const instance = await Faucet.deployed()
+undefined
+truffle(development)>
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+truffle(development)>
+
+C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity>truffle migrate --reset
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\FaucetContract.sol
+> Compiling .\contracts\FaucetContract.sol
+> Compiling .\contracts\Migrations.sol
+> Artifacts written to C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity\build\contracts
+> Compiled successfully using:
+   - solc: 0.8.4+commit.c7e474f2.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0xe7ed6adcec2a07aceb6b707ebc53c854500a737c2e3b4b627f4fbddf28de7bb3
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x875541303a60dA5834558903caff2CC27E843766
+   > block number:        14
+   > block timestamp:     1738624912
+   > account:             0xd591aACE1Edcd252966C40354606d48B032f0831
+   > balance:             89.995487566068068336
+   > gas used:            248204 (0x3c98c)
+   > gas price:           2.662792955 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00066091586260282 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.00066091586260282 ETH
+
+
+2_faucet_migration.js
+=====================
+
+   Replacing 'Faucet'
+   ------------------
+   > transaction hash:    0x230d97f8d0dea064d7d49c3e7c5d35a92e0504908dc9be6815cada8dcb186815
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x733b5ADFFf080B3f3468cfaa8e19486815bF0221
+   > block number:        16
+   > block timestamp:     1738624912
+   > account:             0xd591aACE1Edcd252966C40354606d48B032f0831
+   > balance:             89.995165724652293324
+   > gas used:            76327 (0x12a27)
+   > gas price:           2.626199065 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000200449896034255 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000200449896034255 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.000861365758637075 ETH
+
+
+
+C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity>truffle console
+truffle(development)> const instance = await Faucet.deployed()
+undefined
+
+
+truffle(development)> instance.addFunds({value: "2000000000000000000" })
+{
+  tx: '0x6bb32d480a5e7bdd344e0fc44956bf0120384def69ee8451798bdcc5b13bbc22',
+  receipt: {
+    transactionHash: '0x6bb32d480a5e7bdd344e0fc44956bf0120384def69ee8451798bdcc5b13bbc22',
+    transactionIndex: 0,
+    blockNumber: 18,
+    blockHash: '0xfcf0d53348c9e569030c1dba8551364dd2957bd294fe5dff9b1c691ffb4ff4f6',
+    from: '0xd591aace1edcd252966c40354606d48b032f0831',
+    to: '0x733b5adfff080b3f3468cfaa8e19486815bf0221',
+    cumulativeGasUsed: 21162,
+    gasUsed: 21162,
+    contractAddress: null,
+    logs: [],
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+    status: true,
+    effectiveGasPrice: 2597053337,
+    type: '0x2',
+    rawLogs: []
+  },
+  logs: []
+}
