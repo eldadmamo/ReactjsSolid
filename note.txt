@@ -294,3 +294,267 @@ truffle(development)> instance.addFunds({value: "2000000000000000000" })
   },
   logs: []
 }
+
+truffle(development)> web3.eth.sendTransaction({from: accounts[0], to: "0x72463B3E9C33d774986a769bfb48016f8cec9F59",data:"0xa26759cb", value: "3000000000000000000"})
+{
+  transactionHash: '0x85cf33d7048b127fffff0364ad35ee2c89c4969a6199afe301ab477b4959fee1',
+  transactionIndex: 0,
+  blockNumber: 7,
+  blockHash: '0x028527661e821c0f395b856ba732b8619c3f41cbfe0389571a4c7ac98b812272',
+  from: '0x7e7843b727e59c9ee1ccc66726ef1b5705896916',
+  to: '0x72463b3e9c33d774986a769bfb48016f8cec9f59',
+  cumulativeGasUsed: 21162,
+  gasUsed: 21162,
+  contractAddress: null,
+  logs: [],
+  logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  status: true,
+  effectiveGasPrice: 2900105927,
+  type: '0x2'
+}
+
+
+C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity>truffle console
+truffle(development)> const instance = await Faucet.deployed()
+undefined
+truffle(development)> const result = await instance.justTesting()
+undefined
+truffle(development)> result
+BN { negative: 0, words: [ 4, <1 empty item> ], length: 1, red: null }
+truffle(development)> result.toString()
+'4'
+
+
+this is Postman Sample Place
+
+http://127.0.0.1:7545
+
+{"jsonrpc":"2.0", "method": "eth_accounts", "params": [], "id":1}
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": [
+        "0x7e7843b727e59c9ee1ccc66726ef1b5705896916",
+        "0x4cbe337b849e893e6b163bb710b33bf6916da1d0",
+        "0x64c65bca3c87f4b1d1e231114ca921c6748d47a2",
+        "0x9a88569670edf97c71cf021c0ca5fe735e291014",
+        "0x89e30581dae0ed1ce9c50cbb99bd6cf7b9193bc6",
+        "0xa5d2b31464e7199cb9cdda2b07346d008c2b1b7f",
+        "0x199fcda64f31dd20675766c7b8d01cf5a896cd85",
+        "0x93cdbd6a310bf8feda7d5e59d9e17ca24cc4a5e5",
+        "0x85097f9e8bb7d4768f9ad09f130778d0677953b1",
+        "0x354ab495a149d6b2f56265bf17527c07da07f304"
+    ]
+}
+
+https://eth-converter.com/
+
+https://ethereum.org/en/developers/docs/apis/json-rpc/
+
+
+
+C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity>truffle console
+truffle(development)> const instance = await Faucet.deployed()
+truffle(development)> const instance = await Faucet.deployed()
+Uncaught SyntaxError: Identifier 'instance' has already been declared
+truffle(development)> instance.addFunds({value:"200000000000", from : accounts[0]})
+{
+  tx: '0x5bfb970145175468c6c78dc0fd4400c0d0351b9758a25369df93c619102b8dda',
+  receipt: {
+    transactionHash: '0x5bfb970145175468c6c78dc0fd4400c0d0351b9758a25369df93c619102b8dda',
+    transactionIndex: 0,
+    blockNumber: 17,
+    blockHash: '0x5c8b38d6f87a5b8ff3c7f2ea2d708983ba1507b33c8ac92b320038f894ae859e',
+    from: '0x7e7843b727e59c9ee1ccc66726ef1b5705896916',
+    to: '0x796bec380d1518bcec4adfa73c9efc2d71457c58',
+    cumulativeGasUsed: 65540,
+    gasUsed: 65540,
+    contractAddress: null,
+    logs: [],
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+    status: true,
+    effectiveGasPrice: 2609604035,
+    type: '0x2',
+    rawLogs: []
+  },
+  logs: []
+}
+truffle(development)> instance.addFunds({value:"200000000000", from : accounts[1]})
+{
+  tx: '0xa30b3bbbaefb6fcb73f98f37b231058cbfebf6b224a87f262ff91db2be2d5907',
+  receipt: {
+    transactionHash: '0xa30b3bbbaefb6fcb73f98f37b231058cbfebf6b224a87f262ff91db2be2d5907',
+    transactionIndex: 0,
+    blockNumber: 18,
+    blockHash: '0x327370dfb565de7667951fa93b81e6d81ed1fda4a18c186e133300f0393a227d',
+    from: '0x4cbe337b849e893e6b163bb710b33bf6916da1d0',
+    to: '0x796bec380d1518bcec4adfa73c9efc2d71457c58',
+    cumulativeGasUsed: 48440,
+    gasUsed: 48440,
+    contractAddress: null,
+    logs: [],
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+    status: true,
+    effectiveGasPrice: 2596170694,
+    type: '0x2',
+    rawLogs: []
+  },
+  logs: []
+}
+
+
+
+
+
+
+C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity>truffle migrate --reset
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\FaucetContract.sol
+> Compiling .\contracts\FaucetContract.sol
+> Compiling .\contracts\Migrations.sol
+> Artifacts written to C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity\build\contracts
+> Compiled successfully using:
+   - solc: 0.8.4+commit.c7e474f2.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0xa075c88b4eb93b123a239d7ae26113d5aaa1d91eb8043346626855711634ee88
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x889B50499Ce881AC22DD8cD787788B4BFAE7B832
+   > block number:        29
+   > block timestamp:     1738665834
+   > account:             0x7e7843B727e59c9EE1ccc66726ef1b5705896916
+   > balance:             86.992097410884075162
+   > gas used:            248204 (0x3c98c)
+   > gas price:           2.52341543 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00062632180338772 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.00062632180338772 ETH
+
+
+2_faucet_migration.js
+=====================
+
+   Replacing 'Faucet'
+   ------------------
+   > transaction hash:    0x92a00030710c2711b193ad18cbc71e5cc154e57dad9e3f216f5d5dc38c859925
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xBbEE023C823c2c81EC0b52117225f96b0dc99216
+   > block number:        31
+   > block timestamp:     1738665838
+   > account:             0x7e7843B727e59c9EE1ccc66726ef1b5705896916
+   > balance:             86.991245050343269324
+   > gas used:            292527 (0x476af)
+   > gas price:           2.518151925 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000736627428164475 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000736627428164475 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.001362949231552195 ETH
+
+
+
+C:\Users\eldad\PhpstormProjects\blockchain\reactsolidity>truffle console
+truffle(development)> const instance = await Faucet.deployed()
+undefined
+truffle(development)> instance.addFunds({value:"200000000000", from : accounts[0]})
+{
+  tx: '0x91544bdfba355b859dd6c81fedb6ee53ac850255b9b608f52c2749f3c250e823',
+  receipt: {
+    transactionHash: '0x91544bdfba355b859dd6c81fedb6ee53ac850255b9b608f52c2749f3c250e823',
+    transactionIndex: 0,
+    blockNumber: 33,
+    blockHash: '0xcadf3b0534fc780a3d273e09e5a3ccc4e6118f3e0a713da9a370ff1544ec1ca6',
+    from: '0x7e7843b727e59c9ee1ccc66726ef1b5705896916',
+    to: '0xbbee023c823c2c81ec0b52117225f96b0dc99216',
+    cumulativeGasUsed: 65562,
+    gasUsed: 65562,
+    contractAddress: null,
+    logs: [],
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+    status: true,
+    effectiveGasPrice: 2514087599,
+    type: '0x2',
+    rawLogs: []
+  },
+  logs: []
+}
+truffle(development)> instance.addFunds({value:"200000000000", from : accounts[1]})
+{
+  tx: '0x2a659e21ba3f42ead6b9037958d937f822b57c6409b42c43fc90d4857384fd5b',
+  receipt: {
+    transactionHash: '0x2a659e21ba3f42ead6b9037958d937f822b57c6409b42c43fc90d4857384fd5b',
+    transactionIndex: 0,
+    blockNumber: 34,
+    blockHash: '0x559f3ca8458d0c1ba2fc5801b6ec1406e9a696d4d63f98c3624dd12c1a6dccb5',
+    from: '0x4cbe337b849e893e6b163bb710b33bf6916da1d0',
+    to: '0xbbee023c823c2c81ec0b52117225f96b0dc99216',
+    cumulativeGasUsed: 48462,
+    gasUsed: 48462,
+    contractAddress: null,
+    logs: [],
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+    status: true,
+    effectiveGasPrice: 2512361000,
+    type: '0x2',
+    rawLogs: []
+  },
+  logs: []
+}
+truffle(development)> instance.getFunderAtIndex(0)
+'0x7e7843B727e59c9EE1ccc66726ef1b5705896916'
+truffle(development)> instance.getFunderAtIndex(1)
+'0x4cBe337b849e893E6b163BB710b33bf6916Da1d0'
+truffle(development)> instance.addFunds({value:"200000000000", from : accounts[1]})
+{
+  tx: '0x2b009ee703b243107d27e1328727fa7bbc3877c56eb0305b6f25244b9353caec',
+  receipt: {
+    transactionHash: '0x2b009ee703b243107d27e1328727fa7bbc3877c56eb0305b6f25244b9353caec',
+    transactionIndex: 0,
+    blockNumber: 35,
+    blockHash: '0xcb4fa8b3215daf03da4688916e71b6e980cd0fd9bbcba28bf535b54b60e3c80f',
+    from: '0x4cbe337b849e893e6b163bb710b33bf6916da1d0',
+    to: '0xbbee023c823c2c81ec0b52117225f96b0dc99216',
+    cumulativeGasUsed: 48462,
+    gasUsed: 48462,
+    contractAddress: null,
+    logs: [],
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+    status: true,
+    effectiveGasPrice: 2510838155,
+    type: '0x2',
+    rawLogs: []
+  },
+  logs: []
+}
+truffle(development)> instance.getAllFunders()
+[
+  '0x7e7843B727e59c9EE1ccc66726ef1b5705896916',
+  '0x4cBe337b849e893E6b163BB710b33bf6916Da1d0',
+  '0x4cBe337b849e893E6b163BB710b33bf6916Da1d0'
+]
